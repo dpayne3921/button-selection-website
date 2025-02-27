@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Option 2</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1 id="message"></h1>
+    <p> You might be redirected shortly...</p>
+    <script>
+        const messages = [
+            "Oh dear... you picked Option 2?",
+            "Are you feeling okay? You picked Option 2",
+            "Good choice you picked Option 2",
+            "Looks like you picked Option 2, that was... your decision to make :)"
+        ];
+        const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+        document.getElementById('message').innerText = randomMessage;
+
+        setTimeout(function() {
+            window.location.href = "index.html";
+        }, 8000);
+    </script>
+</body>
+</html>
